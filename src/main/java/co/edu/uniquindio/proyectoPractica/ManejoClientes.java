@@ -14,8 +14,24 @@ public class ManejoClientes {
         this.listaCliente = listaCliente;
     }
 
-    public void agregaCliente(Cliente cliente){
-        getListaCliente().add(cliente);
+    public boolean agregaCliente(Cliente cliente) {
+        Cliente clienteEncontrado = buscarCliente(cliente.getId());
+        if (clienteEncontrado == null) {
+            getListaCliente().add(cliente);
+            return true;
+        }
+        return false;
+
     }
+
+    private Cliente buscarCliente(String id) {
+        for(Cliente cliente: getListaCliente()){
+            if(cliente.getId().equalsIgnoreCase(id)){
+                return cliente;
+            }
+        }
+        return null;
+    }
+
 
 }

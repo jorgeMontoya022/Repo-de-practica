@@ -3,6 +3,7 @@ package co.edu.uniquindio.proyectoPractica;
 public class Cliente {
     private String nombre;
     private int edad;
+    private String id;
 
     public  Cliente(){
 
@@ -24,11 +25,21 @@ public class Cliente {
         this.edad = edad;
     }
 
+    public String getId(){
+        return id;
+    }
+
+    public void setId(String id){
+        this.id = id;
+    }
+
+
     @Override
     public String toString() {
         return "Cliente{" +
                 "nombre='" + nombre + '\'' +
                 ", edad=" + edad +
+                ", id='" + id + '\'' +
                 '}';
     }
 }

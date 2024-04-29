@@ -13,4 +13,9 @@ public class ManejoClientes {
     public void setListaCliente(List<Cliente> listaCliente) {
         this.listaCliente = listaCliente;
     }
+
+    public void agregaCliente(Cliente cliente){
+        getListaCliente().add(cliente);
+    }
+
 }
